@@ -7,7 +7,7 @@ protected:
     int age_;
 public:
     Person()
-    : name_("blank")
+    : name_("unset")
     , age_(0) {
 
     }
