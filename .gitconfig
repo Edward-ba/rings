@@ -1,0 +1,59 @@
+# Anisble managed.  Do NOT change this file.
+
+[user]
+    email = anujra@gmail.com
+    name = Arjuna
+
+[core]
+    pager = less -F -X
+#   autocrlf = true
+
+[color]
+  diff = auto
+  status = auto
+  branch = auto
+  interactive = auto
+  ui = true
+  pager = true
+
+[push]
+    default = current
+[pull]
+    rebase = false
+[merge]
+    ff = only
+	tool = bc
+[fetch]
+    prune = true
+
+[alias]
+    rgrep = !git grep
+    m = merge --no-ff
+    st = status
+    ai = add -i
+    ap = add -p
+    d = diff
+    r = remote
+    dc = diff --cached
+    ci = commit -v
+    cia = commit -v -a
+    co = checkout
+    cp = cherry-pick
+    l = log
+    ll = log -p
+    b = branch
+    reha = reset --hard
+    # %h short commit hash
+    # %d ref names
+    # %s subject
+    # %cn committer name
+    # %cr committer date
+    lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cn %cr)%Creset' --abbrev-commit --date=relative
+    lga = log --graph --all --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cn %cr)%Creset' --abbrev-commit --date=relative
+
+[diff]
+	tool = bc
+[difftool "bc"]
+	path = /usr/bin/bcompare
+[mergetool "bc"]
+	path = /usr/bin/bcompare
